@@ -5,7 +5,7 @@ from  .config import API_KEY
 app = Flask(__name__)
 
 CORS(app, resources = {r"/api/news":{
-    "origins":[].
+    "origins":[],
     "methods": [GET]
 }})
 
@@ -16,7 +16,7 @@ def get_news():
 
     news = { "id": 1, "title": "Demo"}
 
-    if api_key is None and len(requesr.args)>0:
+    if api_key is None and len(request.args)>0:
 
         return jsonify({"error": "Invalid query parameters"})
 
