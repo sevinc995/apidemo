@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 CORS(app, resources = {r"/api/news":{
     "origins":[],
-    "methods": [GET]
+    "methods": ["GET"]
 }})
 
 @app.route("/api/news", methods=["GET"])
